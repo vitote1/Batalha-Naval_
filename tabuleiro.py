@@ -10,8 +10,17 @@ class Tabuleiro():
         ]
 
     def coordenada(self, coordenada):
-        x = ord(coordenada[0].upper()) - ord('A') + 1#No ord, A vale 0, entao o + 1 converte ele num valor acima
-        y = int(coordenada[1:])
+        coordenada = coordenada.strip()
+
+        if len(coordenada) < 2:
+            raise ValueError("Coordenada inválida. Use o formato letra + número (ex: A1)")
+
+        x = ord(coordenada[0].upper()) - ord('A') + 1
+
+        try:
+            y = int(coordenada[1:])
+        except ValueError:
+            raise ValueError("Coordenada inválida. Use o formato letra + número (ex: A1)")
 
         if x < 1 or x > 10:
             raise ValueError("A linha deve estar entre A e J")
@@ -25,13 +34,12 @@ class Tabuleiro():
         x, y = self.coordenada(posicao)
         
         return self.tabuleiro[y - 1][x - 1]
-    #sprites de mar, sprite de missed, sprite de destruir navio
 
     def setSprite(self, novoSprite, posicao):
         x, y = posicao
 
         self.tabuleiro[y - 1][x - 1] = novoSprite
-    #modificar o sprite em base na coordenada que o usuario escolher
+ 
 
     def verificarPosicao(self, posicoes):
         for pos in posicoes:
@@ -64,5 +72,4 @@ class Tabuleiro():
                 linha.append(sprite)
                 
             print(f"{y + 1:2}   " + " ".join(linha))
-
 

@@ -133,7 +133,7 @@ replay = Replay()
 estatisticas = Estatisticas()
 
 while not opcao == 0:
-
+    utils.limparTerminal()
     opcao = menu.iniciarMenu()
     
     if opcao == 1:
@@ -243,6 +243,7 @@ while not opcao == 0:
         replay.salvarReplay()
 
     elif opcao == 2:
+        utils.limparTerminal()
         replay.limparReplay()
 
         print(f"\tBATALHA NAVAL - Jogador vs Computador")

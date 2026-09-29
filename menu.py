@@ -53,14 +53,14 @@ def iniciarMenu():
             utils.limparTerminal()
             return 4
 
-        elif inputUsuario == "3":
+        elif inputUsuario == "4":
                 utils.limparTerminal()
                 print("\n\tCréditos:\n")
                 print("----------------------------")
                 print("\nAutor: Victor Gabriel Fernandes Ferraz\nEmpresa: GPTech Games")
                 print("----------------------------")
                 input("\nPressione Enter para continuar...")
-                return 4
+                return -1
 
         elif inputUsuario == "5":
             utils.limparTerminal()

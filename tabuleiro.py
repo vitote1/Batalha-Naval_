@@ -23,10 +23,10 @@ class Tabuleiro():
             raise ValueError("Coordenada inválida. Use o formato letra + número (ex: A1)")
 
         if x < 1 or x > 10:
-            raise ValueError("A linha deve estar entre A e J")
+            raise ValueError("A coluna deve estar entre A e J")
 
         if y < 1 or y > 10:
-            raise ValueError("A coluna deve estar entre 1 e 10")
+            raise ValueError("A linha deve estar entre 1 e 10")
 
         return [x, y]
 

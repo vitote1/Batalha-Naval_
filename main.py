@@ -311,7 +311,7 @@ while not opcao == 0:
         if jogador.verificarEstaVivo():
             print(f"\nParabéns {jogador.getNome()}! Você venceu a partida!")
         else:
-            print(f"\nParabéns {computador.getNome()}! Você venceu a partida!")
+            print(f"\nComputador ganhou! Você perdeu a partida!")
         
         input("\nPressione Enter para continuar...")
                 

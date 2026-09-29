@@ -28,6 +28,11 @@ class Replay():
             self.jogadas = []
             
     def exibirReplay(self):
+        
+        if not self.jogadas:
+            print("\nNão houve nenhuma partida!")
+            return 0
+            
         tabuleiros = {}  
 
         print("\nReplay da partida anterior:")

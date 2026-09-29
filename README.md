@@ -154,8 +154,8 @@ https://github.com/vitote1/Batalha-Naval_.git
 
 Vídeo demonstrativo
 
-Vídeo demonstrativo temporário:
+Vídeo demonstrativo:
 
-https://youtu.be/TEB6zbYxaQ0
+https://youtu.be/3VWM_t_LmFE
 
-O vídeo foi gravado temporariamente no computador de um colega devido à indisponibilidade do meu computador no momento da gravação.
+O vídeo foi gravado no computador de um colega devido à indisponibilidade do meu computador no momento da gravação.

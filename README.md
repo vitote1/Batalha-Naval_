@@ -29,4 +29,4 @@ são definidas quando ambos concluem suas jogadas, ou seja, quando ambos errarem
 Link do github: https://github.com/vitote1/Batalha-Naval_.git
 
 Link do video no youtube: https://youtu.be/TEB6zbYxaQ0
-Video ficou sem audio, além de que nao estava com meu Pc, pois ele queimou, então para gravar usei um note do meu colega,
+Video temporário pois estou sem PC e gravei na pressa no Pc de meu colega

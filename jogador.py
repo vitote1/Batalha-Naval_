@@ -1,4 +1,3 @@
-
 from tabuleiro import Tabuleiro
 
 class Jogador():
@@ -42,6 +41,27 @@ class Jogador():
             self.tabuleiro.setSprite(sprite, posicao)
         self.navios.append(navio)
 
+    def atacar(self, alvo, coordenada):
+
+        if alvo.tabuleiro.getSprite(coordenada) == "~":
+
+            alvo.tabuleiro.setSprite("X", alvo.tabuleiro.coordenada(coordenada))
+
+            return False
+
+        elif alvo.tabuleiro.getSprite(coordenada) in ["H", "X"]:
+            return None
+
+        else:
+
+            alvo.tabuleiro.setSprite(
+                "H",
+                alvo.tabuleiro.coordenada(coordenada)
+            )
+
+            alvo.diminuirVida()
+
+            return True
 
 
     

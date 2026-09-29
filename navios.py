@@ -1,17 +1,27 @@
 class Navio():
     def __init__(self, coordenada, tipo, orientacao):
+        coordenada = coordenada.strip()
+
+        if len(coordenada) < 2:
+            raise ValueError("Coordenada inválida. Use o formato letra + número (ex: A1)")
+
         x = ord(coordenada[0].upper()) - ord('A') + 1
-        y = int(coordenada[1:])
+
+        try:
+            y = int(coordenada[1:])
+        except ValueError:
+            raise ValueError("Coordenada inválida. Use o formato letra + número (ex: A1)")
+
         if x > 10 or x < 1:
-            raise ValueError("A posição X deve estar entre 1 e 10")
-        
-        if y > 10 or y <1:
-            raise ValueError("A posição Y deve estar entre A e J")
-        
-        if tipo == 'Porta-Aviões':
+            raise ValueError("A letra da coluna deve estar entre A e J")
+
+        if y > 10 or y < 1:
+            raise ValueError("O número da linha deve estar entre 1 e 10")
+
+        if tipo.lower() == 'porta-aviões':
             self.tamanho = 4
-        
-        elif tipo == 'Encouraçado':
+
+        elif tipo.lower() == 'encouraçado':
             self.tamanho = 2
 
         else:
@@ -19,7 +29,7 @@ class Navio():
 
         self.orientacao = orientacao.lower().strip()
         self.posX = x
-        self.posY = y    
+        self.posY = y
         self.tipo = tipo
         self.posicoes = self.definirPosicoes()
 
@@ -67,18 +77,6 @@ class Navio():
     def getPosicoes(self):
         return self.posicoes
 
-    def setPosX(self, novoPosX):
-        self.posX = novoPosX
-
-    def setPosY(self, novoPosY):
-        self.posY = novoPosY
-
-    def setTamanho(self, novoTamanho):
-        self.tamanho = novoTamanho
-
-    def setOrientacao(self, novaOrientacao):
-        self.orientacao = novaOrientacao
 
     
-
 

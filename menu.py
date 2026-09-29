@@ -1,6 +1,4 @@
 import utils
-import replay
-
 
 def iniciarMenu():
 
@@ -12,7 +10,8 @@ def iniciarMenu():
         print("[1] Iniciar Partida")
         print("[2] Ver Replay")
         print("[3] Ver estatísticas")
-        print("[4] Sair")
+        print("[4] Creditos")
+        print("[5] Sair")
         print("--------------------------------")
 
         inputUsuario = input("Escolha uma opção: ")
@@ -43,7 +42,7 @@ def iniciarMenu():
 
             else:
                 print("\nOpção inválida!")
-                input("Pressione Enter para continuar...")
+                input("\nPressione Enter para continuar...")
                 utils.limparTerminal()
 
         elif inputUsuario == "2":
@@ -51,14 +50,25 @@ def iniciarMenu():
             return 3
 
         elif inputUsuario == "3":
+            utils.limparTerminal()
             return 4
 
-        elif inputUsuario == "4":
+        elif inputUsuario == "3":
+                utils.limparTerminal()
+                print("\n\tCréditos:\n")
+                print("----------------------------")
+                print("\nAutor: Victor Gabriel Fernandes Ferraz\nEmpresa: GPTech Games")
+                print("----------------------------")
+                input("\nPressione Enter para continuar...")
+                return 4
+
+        elif inputUsuario == "5":
+            utils.limparTerminal()
             print("Programa encerrado.")
             return 0
 
         else:
             print("\nOpção inválida!")
-            input("Pressione Enter para continuar...")
+            input("\nPressione Enter para continuar...")
             utils.limparTerminal()
             

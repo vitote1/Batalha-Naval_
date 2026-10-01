@@ -144,18 +144,12 @@ Para executar o jogo, basta clonar o repositório e executar:
 
 python main.py
 
-O projeto utiliza somente recursos da linguagem Python e funciona através do terminal, não sendo necessário utilizar uma interface gráfica.
-
 Repositório
 
 GitHub:
 
 https://github.com/vitote1/Batalha-Naval_.git
 
-Vídeo demonstrativo
-
 Vídeo demonstrativo:
 
 https://youtu.be/3VWM_t_LmFE
-
-O vídeo foi gravado no computador de um colega devido à indisponibilidade do meu computador no momento da gravação.
